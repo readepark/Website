@@ -4,86 +4,243 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reade Park</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --background: #ffffff;
+            --text: #000000;
+            --accent: #333333;
+            --light-accent: #f5f5f5;
+            --border: #dddddd;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 60px 0 30px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        nav {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--text);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        ul {
+            list-style-position: inside;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .award {
+            background-color: var(--light-accent);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .award strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .bio {
+            max-width: 800px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+        
+        .two-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        footer {
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--accent);
+        }
+        
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .project {
+            margin-bottom: 20px;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            nav a {
+                margin: 0 10px;
+                font-size: 0.8rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
 </head>
-<body class="bg-black text-white font-sans">
-    <header class="p-6 shadow-md bg-black sticky top-0 z-10 border-b border-gray-700">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold">Reade Park</h1>
-            <nav class="space-x-4">
-                <a href="#academics" class="hover:text-blue-400">Academics</a>
-                <a href="#research" class="hover:text-blue-400">Research</a>
-                <a href="#music" class="hover:text-blue-400">Music</a>
-                <a href="#markets" class="hover:text-blue-400">Markets</a>
-            </nav>
-        </div>
+<body>
+    <header>
+        <h1>READE PARK</h1>
+        <p>Harvard University | New England Conservatory of Music</p>
     </header>
-
-    <main class="max-w-5xl mx-auto p-6 space-y-24">
-        <!-- Academics Section -->
-        <section id="academics">
-            <h2 class="text-3xl font-semibold mb-4">Academics</h2>
-            <p>
-                I study math at Harvard, with a particular interest in algebra (Math 55A) and probability. I was named a John Harvard Scholar (2023 - 2024) and am currently a course assistant for Math 154 (Probability Theory) during spring of 2025.
-            </p>
-        </section>
-
-        <!-- Research Section -->
-        <section id="research">
-            <h2 class="text-3xl font-semibold mb-4">Research</h2>
-            <ul class="list-disc pl-6 space-y-2">
-                <li>
-                    <strong>Cost Allocation in Nepenthes pitcher plants:</strong> project mentored by Chris Thorogood and Henry Cerbone (Department of Botany, Oxford).
-                </li>
-                <li>
-                    <strong>Harvester Ants:</strong> Surveying and excavating colonies in the Chiricahua desert with the Gordon Lab (Stanford).
-                </li>
-                <li>
-                    <strong>Leafcutter Ants:</strong> During high school, I grew several colonies of desert leafcutter ants <em>Acromyrmex versicolor</em>, testing endemic antimicrobials and observing foraging behavior.
-                </li>
-            </ul>
-        </section>
-
-        <!-- Music Section -->
-        <section id="music">
-            <h2 class="text-3xl font-semibold mb-4">Music</h2>
-            <p class="mb-4">
-                I’m currently pursuing a concurrent M.M. in classical guitar under Eliot Fisk at the New England Conservatory of Music, where I’m a Dean’s Scholarship recipient.
-            </p>
-            <h3 class="text-xl font-semibold mb-2">Program Bio</h3>
-            <p class="mb-4 italic">
-                Reade Park, described as “a rare and wonderful talent” by guitar luminary Sharon Isbin, is a musician from San Francisco, California. The first prize winner at the Guitar Foundation of America’s 2022 International Youth Competition, Reade received second prize in the 2024 Boston GuitarFest and 2023 University of Rhode Island International Open-Division Competitions, and is a two-time National YoungArts Foundation Award Winner. He appeared on NPR’s From The Top in 2021 and three times on the OMNI Foundation’s Young Virtuosos Series, most recently in 2024.
-            </p>
-            <p class="mb-4">
-                As a composer, Reade received Harvard University’s 2024 John Green Prize, was a Finalist in the 2022 ASCAP Morton Gould Young Composers Competition, and received 1st Prize in the San Francisco Conservatory of Music’s 2021 Kris Getz Composition Competition.
-            </p>
-            <p class="mb-4">
-                Reade also performs with the Harvard Callbacks, recently qualifying for Quarterfinals at the 2025 International Championship of Collegiate A Cappella. His debut arrangement and performance of the Arctic Monkeys’ “Baby I’m Yours” rendition garnered acclaim online (10M views across platforms).
-            </p>
-            <!-- Instagram Embed -->
-            <div class="my-6">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CpYOeZNLfVh/" data-instgrm-version="14" class="w-full">
-                </blockquote>
-                <script async src="https://www.instagram.com/embed.js"></script>
+    
+    <nav>
+        <a href="#academics">Academics</a>
+        <a href="#research">Research</a>
+        <a href="#music">Music</a>
+        <a href="#markets">Markets</a>
+    </nav>
+    
+    <section id="academics">
+        <div class="section-content">
+            <h2>Academics</h2>
+            <p>I study math at Harvard, with a particular interest in algebra and probability. Some of my favorite courses have included Math 55A (Studies in Algebra & Group Theory), OEB 242 (Population Genetics).</p>
+            <p>I was named a John Harvard Scholar (2023 - 2024) and am currently a course assistant for Math 154 (Probability Theory) during spring of 2025.</p>
+        </div>
+    </section>
+    
+    <section id="research">
+        <div class="section-content">
+            <h2>Research</h2>
+            
+            <div class="project">
+                <div class="project-title">Cost Allocation in Nepenthes pitcher plants</div>
+                <p>Project mentored by Chris Thorogood and Henry Cerbone (Department of Botany, Oxford).</p>
             </div>
-        </section>
-
-        <!-- Markets Section -->
-        <section id="markets">
-            <h2 class="text-3xl font-semibold mb-4">Markets</h2>
-            <p class="mb-4">
-                I'm broadly interested in both fundamental and quantitative investing, and will be working in a quantitative research role during summer 2025. On campus, I serve as vice president for an undergraduate equity fund.
-            </p>
-            <h3 class="text-xl font-semibold mb-2">Selected Awards:</h3>
-            <ul class="list-disc pl-6 space-y-2">
-                <li>1st, Harvard Financial Analysts Club Quant Trading Competition (Spring 2024)</li>
-                <li>2nd, Harvard Undergraduate Trading Competition x Jump Trading Market Match (Spring 2025)</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer class="text-center text-sm text-gray-400 p-6 border-t border-gray-700">
-        © 2025 Reade Park. All rights reserved.
+            
+            <div class="project">
+                <div class="project-title">Harvester Ant Cost Allocation</div>
+                <p>Surveying and excavating colonies in the Chiricahua desert with the Gordon Lab (Stanford).</p>
+            </div>
+            
+            <div class="project">
+                <div class="project-title">Leafcutter Ants</div>
+                <p>During high school, I grew several colonies of desert leafcutter ants Acromyrmex versicolor, testing endemic antimicrobials and observing foraging behavior.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="music">
+        <div class="section-content">
+            <h2>Music</h2>
+            <p>I'm currently pursuing a concurrent M.M. in classical guitar under Eliot Fisk at the New England Conservatory of Music, where I'm a Dean's Scholarship recipient.</p>
+            
+            <div class="bio">
+                <p>Reade Park, described as "a rare and wonderful talent" by guitar luminary Sharon Isbin, is a musician from San Francisco, California. The first prize winner at the Guitar Foundation of America's 2022 International Youth Competition, Reade received second prize in the 2024 Boston GuitarFest and 2023 University of Rhode Island International Open-Division Competitions, and is a two-time National YoungArts Foundation Award Winner. He appeared on NPR's From The Top in 2021 and three times on the OMNI Foundation's Young Virtuosos Series, most recently in 2024.</p>
+                <p>As a composer, Reade received Harvard University's 2024 John Green Prize, was a Finalist in the 2022 ASCAP Morton Gould Young Composers Competition, and received 1st Prize in the San Francisco Conservatory of Music's 2021 Kris Getz Composition Competition.</p>
+                <p>Reade also performs with the Harvard Callbacks, recently qualifying for Quarterfinals at the 2025 International Championship of Collegiate A Cappella. His debut arrangement and performance of the Arctic Monkeys' "Baby I'm Yours" rendition garnered acclaim online (10M views across platforms).</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="markets">
+        <div class="section-content">
+            <h2>Markets</h2>
+            <p>I'm broadly interested in both fundamental and quantitative investing, and will be working in a quantitative research role during summer 2025. On campus, I serve as vice president for an undergraduate equity fund.</p>
+            
+            <h3 style="margin-top: 20px; margin-bottom: 15px; font-size: 1.2rem;">Selected Awards</h3>
+            <div class="award">
+                <strong>1st Place</strong>
+                Harvard Financial Analysts Club Quant Trading Competition (Spring 2024)
+            </div>
+            <div class="award">
+                <strong>2nd Place</strong>
+                Harvard Undergraduate Trading Competition x Jump Trading Market Match (Spring 2025)
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Reade Park | Cambridge, Massachusetts</p>
     </footer>
 </body>
 </html>
