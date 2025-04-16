@@ -1,83 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reade Park</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black text-white font-sans">
+<body class="bg-white text-gray-900 font-sans">
+    <header class="p-6 shadow-md bg-white sticky top-0 z-10">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Reade Park</h1>
+            <nav class="space-x-4">
+                <a href="#academics" class="hover:text-blue-600">Academics</a>
+                <a href="#research" class="hover:text-blue-600">Research</a>
+                <a href="#music" class="hover:text-blue-600">Music</a>
+                <a href="#finance" class="hover:text-blue-600">Finance</a>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Header -->
-  <header class="p-6 shadow-md bg-black sticky top-0 z-10 border-b border-gray-800">
-    <div class="max-w-5xl mx-auto flex justify-between items-center">
-      <h1 class="text-xl font-bold">Your Name</h1>
-      <nav class="space-x-4 text-sm sm:text-base">
-        <a href="#academics" class="hover:text-blue-400">Academics</a>
-        <a href="#music" class="hover:text-blue-400">Music</a>
-        <a href="#research" class="hover:text-blue-400">Research</a>
-        <a href="#finance" class="hover:text-blue-400">Finance</a>
-      </nav>
-    </div>
-  </header>
+    <main class="max-w-5xl mx-auto p-6 space-y-24">
+        <!-- Academics Section -->
+        <section id="academics">
+            <h2 class="text-3xl font-semibold mb-4">Academics</h2>
+            <p class="text-gray-700">
+                I study math at Harvard, with a particular interest in algebra (Math 55A) and probability. I was named a John Harvard Scholar (2023 - 2024) and am currently a course assistant for Math 154 (Probability Theory) during spring of 2025.
+            </p>
+        </section>
 
-  <!-- Main Content -->
-  <main class="max-w-5xl mx-auto p-6 space-y-24">
+        <!-- Research Section -->
+        <section id="research">
+            <h2 class="text-3xl font-semibold mb-4">Research</h2>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                <li>
+                    <strong>Cost Allocation in Nepenthes pitcher plants:</strong> project mentored by Chris Thorogood and Henry Cerbone (Department of Botany, Oxford).
+                </li>
+                <li>
+                    <strong>Harvester Ants:</strong> Surveying and excavating colonies in the Chiricahua desert with the Gordon Lab (Stanford).
+                </li>
+                <li>
+                    <strong>Leafcutter Ants:</strong> During high school, I grew several colonies of desert leafcutter ants <em>Acromyrmex versicolor</em>, testing endemic antimicrobials and observing foraging behavior.
+                </li>
+            </ul>
+        </section>
 
-    <!-- Intro -->
-    <section class="text-center pt-12">
-      <h2 class="text-4xl font-bold mb-4">Hi, I'm Your Name</h2>
-      <p class="text-lg text-gray-300">Harvard Student | Musician | Data Enthusiast | Finance Explorer</p>
-    </section>
+        <!-- Music Section -->
+        <section id="music">
+            <h2 class="text-3xl font-semibold mb-4">Music</h2>
+            <p class="text-gray-700 mb-4">
+                I’m currently pursuing a concurrent M.M. in classical guitar under Eliot Fisk at the New England Conservatory of Music, where I’m a Dean’s Scholarship recipient. Here’s my program bio:
+            </p>
+            <p class="text-gray-700 mb-4 italic">
+                Reade Park, described as “a rare and wonderful talent” by guitar luminary Sharon Isbin, is a musician from San Francisco, California. The first prize winner at the Guitar Foundation of America’s 2022 International Youth Competition, Reade received second prize in the 2024 Boston GuitarFest and 2023 University of Rhode Island International Open-Division Competitions, and is a two-time National YoungArts Foundation Award Winner. He appeared on NPR’s From The Top in 2021 and three times on the OMNI Foundation’s Young Virtuosos Series, most recently in 2024.
+            </p>
+            <p class="text-gray-700 mb-4">
+                As a composer, Reade received Harvard University’s 2024 John Green Prize, was a Finalist in the 2022 ASCAP Morton Gould Young Composers Competition, and received 1st Prize in the San Francisco Conservatory of Music’s 2021 Kris Getz Composition Competition.
+            </p>
+            <p class="text-gray-700">
+                Reade also performs with the Harvard Callbacks, recently qualifying for Quarterfinals at the 2025 International Championship of Collegiate A Cappella. His debut arrangement and performance of the Arctic Monkeys’ “Baby I’m Yours” rendition garnered acclaim online (10M views across platforms).
+            </p>
+        </section>
 
-    <!-- Academics -->
-    <section id="academics">
-      <h3 class="text-2xl font-semibold mb-2 text-blue-400">Academics</h3>
-      <p class="text-gray-300">
-        Currently studying at Harvard with interests spanning economics, statistics, and computer science. Passionate about interdisciplinary learning and quantitative problem-solving.
-      </p>
-    </section>
+        <!-- Finance Section -->
+        <section id="finance">
+            <h2 class="text-3xl font-semibold mb-4">Finance</h2>
+            <p class="text-gray-700 mb-4">
+                I'm broadly interested in both fundamental and quantitative investing, and will be working in a quantitative research role during summer 2025. On campus, I serve as vice president for an undergraduate equity fund.
+            </p>
+            <h3 class="text-xl font-semibold mb-2">Selected Awards:</h3>
+            <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                <li>1st, Harvard Financial Analysts Club Quant Trading Competition (Spring 2024)</li>
+                <li>2nd, Harvard Undergraduate Trading Competition x Jump Trading Market Match (Spring 2025)</li>
+            </ul>
+        </section>
+    </main>
 
-    <!-- Music -->
-    <section id="music">
-      <h3 class="text-2xl font-semibold mb-2 text-blue-400">Music</h3>
-      <p class="text-gray-300 mb-2">
-        I'm a guitarist and singer with an Instagram music channel that has grown to 50k+ followers. I share original covers, songwriting experiments, and live performance clips.
-      </p>
-      <ul class="list-disc pl-6 text-gray-400">
-        <li>🎸 Guitarist & Vocalist</li>
-        <li>📸 Instagram: @yourhandle</li>
-        <li>🎵 Exploring AI in music creation</li>
-      </ul>
-    </section>
-
-    <!-- Research -->
-    <section id="research">
-      <h3 class="text-2xl font-semibold mb-2 text-blue-400">Research</h3>
-      <p class="text-gray-300">
-        My research centers on forecasting U.S. trade flows using time series models, input-output analysis, and data visualization. I’m also exploring AI music synthesis tools.
-      </p>
-    </section>
-
-    <!-- Finance -->
-    <section id="finance">
-      <h3 class="text-2xl font-semibold mb-2 text-blue-400">Finance</h3>
-      <p class="text-gray-300">
-        Interested in derivatives trading, alternative assets, and special situations investing. Currently preparing for roles in quant trading and financial research.
-      </p>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 p-6 border-t border-gray-800">
-    © 2025 Your Name. All rights reserved.
-  </footer>
-
+    <footer class="text-center text-sm text-gray-500 p-6">
+        © 2025 Reade Park. All rights reserved.
+    </footer>
 </body>
 </html>
